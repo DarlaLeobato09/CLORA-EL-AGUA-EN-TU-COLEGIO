@@ -1,0 +1,155 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    color:#1a73e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+}
+
+.presentacion__titulo {
+    font-size: 3em;
+    color: #1a73e8;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display:flex;
+}
+
+/* Contenedor para las imágenes */
+.imagenes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; 
+    max-width: 1200px; /* Ancho máximo de la pantalla */
+    margin-bottom: 40px;
+}
+
+/* Las imágenes estarán a los lados */
+.imagenes img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto hover en las imágenes */
+.imagenes img:hover {
+    transform: scale(1.1);
+}
+
+/* Contenedor para los inputs y el botón (centrado entre las imágenes) */
+.calculadora {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px; 
+    margin-top: -200px;/* Ancho máximo para la calculadora */
+}
+
+/* Estilo de los inputs */
+.calculadora input {
+    margin: 10px;
+    padding: 12px;
+    font-size: 16px;
+    width: 250px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.calculadora input:focus {
+    border-color: #1a73e8;
+    outline: none;
+}
+
+/* Estilo del botón */
+button {
+    padding: 15px 40px;
+    font-size: 18px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0049b7;
+    transform: scale(1.05); /* Efecto de aumento al poner el puntero sobre el botón */
+}
+
+/* Estilo del div de resultado */
+#resultado {
+    margin-top: 30px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    padding: 12px 30px;
+    border: 2px solid #1a73e8;
+    border-radius: 5px;
+    background-color: #e7f4fe;
+    display: inline-block;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    min-width: 250px;
+}
+
+#resultado {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animación de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media Queries para hacerlo responsive */
+@media (max-width: 768px) {
+    .imagenes {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .imagenes img {
+        margin-bottom: 20px;
+    }
+
+    .calculadora {
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .calculadora input {
+        width: 80%;
+    }
+
+    button {
+        width: 80%;
+    }
+
+    #resultado {
+        width: 80%;
+    }
+}
